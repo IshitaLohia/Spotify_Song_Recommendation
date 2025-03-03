@@ -1,1 +1,53 @@
+Spotify Song Recommendation System: A Deep Dive into Distance Metrics 🎵🚀
+📌 Project Overview
+This project explores how distance metrics impact song recommendations using a Spotify dataset. The goal is to identify songs similar to a user’s preferences based on audio features such as tempo, energy, danceability, and valence.
 
+The challenge? Choosing the right similarity measure to accurately capture musical patterns and provide meaningful recommendations.
+
+🔍 Exploratory Data Analysis (EDA)
+Before building the recommendation system, I performed EDA to:
+✅ Understand song trends over time 📊
+✅ Analyze key features like energy, tempo, danceability 🎶
+✅ Detect missing values & preprocess the data 🛠️
+✅ Visualize feature distributions & correlations 🧐
+
+EDA helped shape the feature selection for clustering and similarity calculations.
+
+🎯 Distance Metrics for Music Recommendations
+To recommend similar songs, I tested two widely used distance metrics:
+
+📌 Euclidean Distance (Straight-Line Similarity)
+✅ Measures absolute distance in feature space.
+✅ Works well in low-dimensional data.
+❌ Sensitive to scale differences (e.g., loudness variations can skew results).
+❌ Not ideal for high-dimensional data like music features.
+
+📌 Cosine Similarity (Pattern-Based Similarity)
+✅ Measures the angle between feature vectors instead of absolute difference.
+✅ Ignores differences in scale, focusing on song patterns.
+✅ Works well for high-dimensional data, making it ideal for music recommendations.
+✅ Used in real-world systems like Spotify, Netflix, and YouTube.
+
+🚀 Key Takeaway?
+Cosine Similarity outperformed Euclidean Distance for song recommendations because it focuses on feature patterns rather than raw numerical values. This ensures better recommendations even if two songs have different loudness or tempo ranges.
+
+🔬 Clustering & Visualization
+To group similar songs, I applied:
+🎼 K-Means Clustering – To explore how well songs naturally cluster into different genres.
+📊 PCA & t-SNE – For dimensionality reduction and visualizing genre distribution in feature space.
+
+🎧 Final Recommendation System
+The final system allows users to:
+1️⃣ Select a genre they like 🎼
+2️⃣ Pick two songs from the top 10 popular tracks in that genre 🎵
+3️⃣ Get 5 personalized song recommendations based on similarity 🎯
+
+This interactive process ensures that users have control over their preferences while the system finds the best musical match!
+
+🚀 Future Improvements & Next Steps
+🔹 Hybrid Filtering: Combine content-based & collaborative filtering for more personalized recommendations.
+🔹 Deep Learning (Autoencoders): Capture complex song embeddings for even better feature representation.
+🔹 Playlist-Based Recommendations: Using Jaccard Similarity to recommend songs based on shared playlists.
+
+📢 Final Thoughts
+This project highlights the importance of choosing the right distance metric for similarity-based recommendations. While Euclidean Distance works in some cases, Cosine Similarity proves to be more effective for high-dimensional data like audio features.
