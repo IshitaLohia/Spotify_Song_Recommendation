@@ -34,7 +34,6 @@ Cosine Similarity outperformed Euclidean Distance for song recommendations becau
 🔬 Clustering & Visualization
 To group similar songs, I applied:
 🎼 K-Means Clustering – To explore how well songs naturally cluster into different genres.
-📊 PCA & t-SNE – For dimensionality reduction and visualizing genre distribution in feature space.
 
 🎧 Final Recommendation System
 The final system allows users to:
